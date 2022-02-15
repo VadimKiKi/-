@@ -53,13 +53,13 @@ int main()
             fileout << "IER = 7" << endl;
             fileout << "Неверно введены данные!" << endl;
         }
-        
+
         cout << "IER = 7" << endl;
         cout << "Неверно введены данные!" << endl;
         return 0;
     }
 
-    
+
     vector <double> x; //вспомогательный вектор, в котором я буду хранить все значения х полученные в ходе решения
     x.push_back(x0);
     double fx, dfx;
@@ -112,9 +112,9 @@ int main()
         cout << "Число итераций: " << l << endl;
         return 0;
     }
-    
+
     double x_new, x_old = x1;
-    
+
     //итерационный процесс
     while (pogreshnost > epsilon && l <= k)
     {
@@ -135,7 +135,7 @@ int main()
                 fileout << "Деление на 0!" << endl;
             }
             fileout.close();
-            cout<< "IER = 3" << endl;
+            cout << "IER = 3" << endl;
             cout << "Деление на 0!" << endl;
             return 0;
         }
@@ -190,20 +190,20 @@ int main()
         }
         fileout.close();
         cout << endl << endl << "Решение получено!" << " Ответ: " << x_old << endl;
-        cout<< "Значение модуля функции в найденном значении: " << abs(f(x_old)) << endl;
+        cout << "Значение модуля функции в найденном значении: " << abs(f(x_old)) << endl;
         cout << "Точность полученного решения: " << pogreshnost << endl;
         cout << "Число итераций: " << l << endl;
         return 0;
     }
-    
+    cout << endl;
     return 0;
 }
 double f(double x)
 {
-    return x * x * x*x - 2;
+    return x * x * x * x - 2;
 }
 double df(double x)
 {
-    return 4 * x * x*x;
+    return 4 * x * x * x;
 }
 
