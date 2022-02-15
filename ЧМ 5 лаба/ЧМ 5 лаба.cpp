@@ -195,7 +195,7 @@ int main()
         cout << "Число итераций: " << l << endl;
         return 0;
     }
-    cout << endl;
+    
     return 0;
 }
 double f(double x)
